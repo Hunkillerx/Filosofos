@@ -32,11 +32,13 @@ public class Filosofo extends Thread {
                 izda.qPalillo(id);
                 dcha.qPalillo(id);
                 // comer
+                System.out.println("Filosofo "+id+" Ya comio");
                 dcha.sPalillo(id);
-                izda.qPalillo(id);
+                izda.sPalillo(id);
                 s.sSilla(id);
+                
             } catch (InterruptedException ex) {
-                Logger.getLogger(Filosofo.class.getName()).log(Level.SEVERE, null, ex);
+                ex.printStackTrace();
             }
         }
     }
